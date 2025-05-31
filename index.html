@@ -213,35 +213,51 @@
       }
 
       #tabs .row {
-        display: flex;
         flex-direction: column;
       }
 
       #tabs .col-md-6 {
-        flex: 1 1 100%;
         max-width: 100%;
+        flex: 1 1 100%;
         margin-bottom: 15px;
-        /* space between image and text */
       }
 
-      /* Optional: make images responsive */
       #tabs img {
         width: 100%;
         height: auto;
         border-radius: 8px;
-        /* if you want rounded corners */
       }
 
-      /* Tabs ul (tab buttons) scroll horizontally if overflow */
+      /* Make tabs list stack or wrap */
       #tabs>ul {
         display: flex;
-        overflow-x: auto;
+        flex-wrap: wrap;
+        justify-content: center;
         padding-left: 0;
+        list-style: none;
       }
 
       #tabs>ul li {
-        flex: 0 0 auto;
-        margin-right: 10px;
+        margin: 5px;
+        flex: 1 1 100%;
+        /* Makes each tab full-width on small screens */
+        text-align: center;
+      }
+
+      #tabs>ul li a {
+        display: block;
+        padding: 10px 15px;
+        background: #f5f5f5;
+        border-radius: 5px;
+        color: #333;
+        text-decoration: none;
+        transition: background 0.3s ease;
+      }
+
+      #tabs>ul li a:hover,
+      #tabs>ul li.ui-tabs-active a {
+        background: #007bff;
+        color: white;
       }
 
       .section.video .left-content span {
