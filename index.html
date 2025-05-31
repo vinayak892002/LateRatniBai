@@ -93,7 +93,29 @@
       background-color: rgba(0, 0, 0, 0.7);
     }
 
+    .features-post p {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .features .row>[class*='col-'] {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
     @media (max-width: 608px) {
+      .features .row {
+        display: flex;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .features .row>[class*='col-'] {
+        flex: 0 0 80%;
+        /* adjust width */
+        max-width: 80%;
+        margin-right: 10px;
+      }
 
       .owl-carousel .item {
         max-width: 280px !important;
@@ -179,12 +201,12 @@
       }
 
       .features h4 {
-        font-size: 32px;
+        font-size: 12px;
         /* smaller heading */
       }
 
       .features p {
-        font-size: 10px;
+        font-size: 11px;
         /* smaller paragraph */
       }
 
