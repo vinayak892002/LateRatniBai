@@ -212,40 +212,35 @@
         box-sizing: border-box;
       }
 
-      #tabs>ul {
+      #tabs .tabs-content article {
+        font-size: 13px;
+        /* slightly smaller base font */
+      }
+
+      #tabs .tabs-content article h4 {
+        font-size: 15px;
+        /* slightly smaller heading */
+        margin-bottom: 5px;
+        /* slightly less space */
+      }
+
+      #tabs .tabs-content article p {
+        font-size: 12.5px;
+        /* slightly smaller paragraph */
+        line-height: 1.25;
+      }
+
+      #tabs .tabs-content article .col-md-6 img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        /* slightly less gap */
+      }
+
+      #tabs .tabs-content article .row {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 6px;
-        /* slightly smaller spacing */
-        padding-left: 0;
-        list-style: none;
-        margin-bottom: 15px;
-      }
-
-      #tabs>ul li {
-        flex: 1 1 auto;
-      }
-
-      #tabs>ul li a {
-        display: block;
-        padding: 6px 14px;
-        /* smaller padding */
-        background-color: #f5f5f5;
-        color: #333;
-        border-radius: 5px;
-        text-decoration: none;
-        text-align: center;
-        transition: background 0.3s ease;
-        white-space: nowrap;
-        font-size: 0.9rem;
-        /* smaller text */
-      }
-
-      #tabs>ul li a:hover,
-      #tabs>ul li.ui-tabs-active a {
-        background-color: #007bff;
-        color: white;
+        flex-direction: column;
+        /* no change */
       }
 
 
