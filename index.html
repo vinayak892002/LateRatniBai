@@ -93,44 +93,7 @@
       background-color: rgba(0, 0, 0, 0.7);
     }
 
-
-    @media (max-width: 608px) {
-      .features .row {
-        display: block;
-        /* ensure rows stack vertically */
-      }
-
-      .features .col-lg-4 {
-        width: 100% !important;
-        /* full width on mobile */
-        max-width: 100% !important;
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-bottom: 20px;
-        /* space between features */
-        box-sizing: border-box;
-      }
-
-      .features-post {
-        padding: 15px;
-        border: 1px solid #ddd;
-        /* optional: add subtle border */
-        border-radius: 8px;
-        /* optional: rounded corners */
-        background: #f9f9f9;
-        /* optional: subtle background */
-      }
-
-      .features-post h4 {
-        font-size: 18px;
-        margin-bottom: 10px;
-      }
-
-      .features-post p {
-        font-size: 14px;
-        line-height: 1.5;
-        margin-bottom: 0;
-      }
+    @media (max-width: 708px) {
 
       .owl-carousel .item {
         max-width: 280px !important;
@@ -216,13 +179,37 @@
       }
 
       .features h4 {
-        font-size: 12px;
+        font-size: 13px;
         /* smaller heading */
       }
 
       .features p {
         font-size: 11px;
         /* smaller paragraph */
+      }
+
+      .features .row {
+        display: flex;
+        flex-wrap: nowrap;
+        /* prevent wrapping */
+        overflow-x: auto;
+        /* enable horizontal scroll */
+        -webkit-overflow-scrolling: touch;
+        /* smooth scroll on iOS */
+      }
+
+      /* Make each column take up about 80% width on mobile */
+      .features .col-lg-4 {
+        flex: 0 0 80%;
+        max-width: 80%;
+        margin-right: 15px;
+        /* space between items */
+      }
+
+      /* Optional: add some padding inside feature blocks */
+      .features-post {
+        padding: 15px;
+        box-sizing: border-box;
       }
 
       #tabs .tabs-content article {
