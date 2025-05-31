@@ -93,6 +93,12 @@
       background-color: rgba(0, 0, 0, 0.7);
     }
 
+    @media screen and (max-width: 1050px) {
+      .main-header .logo {
+        padding-left: 10px !important;
+      }
+    }
+
     @media (max-width: 708px) {
 
       .owl-carousel .item {
@@ -122,6 +128,7 @@
       }
 
       header.main-header {
+        /* padding-left: 10px; */
         padding: 8px 15px;
         display: flex;
         align-items: center;
@@ -131,10 +138,22 @@
         box-sizing: border-box;
       }
 
+      header.main-header .logo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        /* space between logo and text */
+        flex-grow: 1;
+        /* take left space */
+        justify-content: flex-start;
+        /* align items to the left */
+      }
+
       header.main-header .logo a {
         font-size: 13px !important;
         max-width: 70vw;
         /* restrict width so hamburger fits */
+        text-decoration: none;
         white-space: normal;
         /* allow wrapping */
         line-height: 1.2;
@@ -340,13 +359,12 @@
 
   <!--header-->
   <header class="main-header clearfix" role="header">
-    <div class="logo" >
-      <img src="assets/images/logo.png" alt="School Logo"
-        style="height: 40px; vertical-align: middle;">
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="School Logo" style="height: 40px; vertical-align: middle;">
       <a href="#" style="font-size: 25px;"><em>LATE RATNIBAI</em> ENGLISH SCHOOL</a>
 
     </div>
-    <a href="#menu"  class="menu-link"><i class="fa fa-bars"></i></a>
+    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
     <nav id="menu" class="main-nav" role="navigation">
       <ul class="main-menu">
         <li><a href="#section1">Home</a></li>
